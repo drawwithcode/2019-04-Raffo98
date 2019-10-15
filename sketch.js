@@ -6,7 +6,7 @@ var vol = 0;
 var marioFont;
 
 function preload() {
-  soundtrack1 = loadSound("./assets/Mario64Theme.mp3");
+  soundtrack1 = loadSound("./assets/Mario64theme.mp3");
   img = loadImage("./assets/Mario.png");
   star = loadImage("./assets/Star.png");
   marioFont = loadFont('./assets/SuperMario256.ttf');
