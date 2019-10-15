@@ -36,21 +36,20 @@ function draw() {
   imageMode(CENTER);
   image(star, windowWidth / 2 + 400, windowHeight / 2 + 200, 90, 90);
   //Avvio musica
-  if(mouseIsPressed) {
+  if (mouseIsPressed) {
     if (soundtrack1.isPlaying() == false) {
       soundtrack1.play();
     }
   }
   //Controllo puntatore che passa sulla stella
-    if (mouseX >= (windowWidth / 2 + 400) - 45 &&
-      mouseX <= (windowWidth / 2 + 400) + 45 && mouseY >= (windowHeight / 2 + 200) - 45 &&
-      mouseY <= (windowHeight / 2 + 200) + 45) {
-      image(star, windowWidth / 2 + 400, windowHeight / 2 + 200, 400, 400);
-      soundtrack1.rate(4);
-    }
-    else {
-      soundtrack1.rate(1);
-    }
+  if (mouseX >= (windowWidth / 2 + 400) - 45 &&
+    mouseX <= (windowWidth / 2 + 400) + 45 && mouseY >= (windowHeight / 2 + 200) - 45 &&
+    mouseY <= (windowHeight / 2 + 200) + 45) {
+    image(star, windowWidth / 2 + 400, windowHeight / 2 + 200, 400, 400);
+    soundtrack1.rate(4);
+  } else {
+    soundtrack1.rate(1);
+  }
   vol = analyzer.getLevel();
   vol = map(vol, 0, 100, 0, 100);
   image(img, windowWidth / 4, windowHeight / 2, (img.width / 1.5) * vol * 5, (img.height / 1.5) * vol * 5);
